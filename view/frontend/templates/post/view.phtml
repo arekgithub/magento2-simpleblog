@@ -1,0 +1,7 @@
+<?php /** @var Convert\Blog\Block\View $block */ ?>
+<?php if ($block->isEnabled()): ?>
+    <h1><?= $block->getPost()->getTitle(); ?></h1>
+    <p><?= $block->getPost()->getPublishDate(); ?></p>
+    <p><?= $block->getPost()->getContent(); ?></p>
+    <p><?= $block->getPost()->getAuthor(); ?></p>
+<?php endif; ?>

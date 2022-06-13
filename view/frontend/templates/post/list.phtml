@@ -1,0 +1,10 @@
+<?php /** @var Convert\Blog\Block\Posts $block */ ?>
+<?php if ($block->isEnabled()): ?>
+    <h1>Simple Blog</h1>
+    <?php foreach($block->getPosts() as $post): ?>
+        <h2><a href="<?= $block->getPostUrl($post); ?>">
+            <?= $post->getTitle(); ?></a></h2>
+        <p><?= $post->getPublishDate(); ?></p>
+        <p><?= $post->getAuthor(); ?></p>
+    <?php endforeach; ?> 
+<?php endif; ?>

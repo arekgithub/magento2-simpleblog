@@ -1,0 +1,14 @@
+{
+    "convert_blog_post": {
+        "column": {
+            "post_id": true,
+            "title": true,
+            "content": true,
+            "author": true,
+            "publish_date": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

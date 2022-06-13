@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="convert_blog_post_listing_data_source" 
+                    xsi:type="string">Convert\Blog\Model\ResourceModel\Post\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+	<preference for="Convert\Blog\Api\PostRepositoryInterface" type="Convert\Blog\Model\PostRepository"/>
+	<preference for="Convert\Blog\Api\Data\PostInterface" type="Convert\Blog\Model\Post"/>
+	<preference for="Convert\Blog\Api\Data\PostSearchResultInterface" type="Convert\Blog\Model\PostSearchResult"/>
+    
+    <!-- webapi -->
+    <preference for="Convert\Blog\Api\RequestItemInterface" type="Convert\Blog\Model\Api\RequestItem" />
+    <preference for="Convert\Blog\Api\ResponseItemInterface" type="Convert\Blog\Model\Api\ResponseItem" />
+
+	<!-- Logger-->
+    <type name="Convert\Blog\Logger\Handler\StatLogHandler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Convert\Blog\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">convert_blog</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="connector_log_handler" xsi:type="object">Convert\Blog\Logger\Handler\StatLogHandler</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

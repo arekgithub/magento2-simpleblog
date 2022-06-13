@@ -1,0 +1,58 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="convert" translate="label" sortOrder="10">
+            <label>Convert Blog</label>
+        </tab>
+        <section id="convertblog" translate="label" sortOrder="130" 
+            showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Convert Blog</label>
+            <tab>convert</tab>
+            <resource>Convert_Blog::convertblog_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" 
+                showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                    <field id="enableblog" translate="label" type="select" sortOrder="1" 
+                        showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Convert Blog Enable</label>
+                        <comment><![CDATA[Select Yes to enable.]]></comment>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+
+                    <!-- <field id="button_label_text" translate="label" type="text" sortOrder="30" 
+                        showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Button Label Text</label>  
+                        <validate>required-entry</validate> 
+                        <depends>
+                            <field id="enableblog">1</field>
+                        </depends>                      
+                    </field>
+
+                    <field id="cart_message_on_wp_share" translate="label" 
+                        type="textarea" sortOrder="31" 
+                        showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Cart Message on Whatsapp Share Link</label>   
+                        <validate>required-entry</validate>    
+                        <depends>
+                            <field id="enableblog">1</field>
+                        </depends>                  
+                    </field>
+
+                    <field id="wp_button_position" translate="label" 
+                        type="select" sortOrder="32" 
+                        showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Whatsapp Button Position on Cart Page</label>
+                        <comment><![CDATA[select button position for display on cart page]]></comment>
+                         <source_model>Convert\Blog\Model\Label\Source\Position</source_model>
+                        <depends>
+                            <field id="enableblog">1</field>
+                        </depends>
+                    </field> -->
+                    <!-- <field id="display_text" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                        <label>Display Text</label>
+                        <comment>This text will display on the frontend.</comment>
+                    </field> -->
+            </group>
+  </section>
+    </system>
+</config>
