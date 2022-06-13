@@ -1,5 +1,5 @@
 {
-    "name": "convert/blog",
+    "name": "arekgithub/magento2-simpleblog",
     "description": "N/A",
     "require": {
       "php": "~7.4.0"
