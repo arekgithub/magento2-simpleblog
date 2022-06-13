@@ -2,7 +2,7 @@
     "name": "convert/blog",
     "description": "N/A",
     "require": {
-      "php": "~7.4.0",
+      "php": "~7.4.0"
     },
     "type": "magento2-module",
     "version": "0.5.0",
