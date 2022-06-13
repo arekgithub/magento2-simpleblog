@@ -8,6 +8,7 @@
     "type": "magento2-module",
     "version": "0.5.0",
     "license": [],
+    "minimum-stability": "stable",    
     "autoload": {
         "files": [
             "registration.php"
